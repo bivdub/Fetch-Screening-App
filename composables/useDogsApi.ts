@@ -1,29 +1,4 @@
 export function useDogsApi() {
-  const loadIds = async (params: Record<string, any>) => {
-    const { data, error } = await useFetch(`/api/dogs/search`, {
-      params
-    })
-
-    if (error.value?.statusCode === 401) {
-      return navigateTo('/login')
-    }
-
-    return { result: data }
-  }
-
-  const loadDogDetails = async (ids: string[]) => {
-    const { data, error } = await useFetch('/api/dogs', {
-      method: 'POST',
-      body: JSON.stringify(ids)
-    })
-
-    if (error.value?.statusCode === 401) {
-      return navigateTo('/login')
-    }
-
-    return { result: data }
-  }
-
   const getIds = async (params: Record<string, any>) => {
     const result: Record<string, any> = await $fetch(`/api/dogs/search`, {
       method: 'GET',
@@ -66,5 +41,5 @@ export function useDogsApi() {
     return { result: result }
   }
 
-  return { getIds, getDogDetails, loadIds, loadDogDetails, getFinalDog }
+  return { getIds, getDogDetails, getFinalDog }
 }

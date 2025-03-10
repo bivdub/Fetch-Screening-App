@@ -232,16 +232,16 @@
 
   // Initial content load
   breeds.value = await useFetch('api/dogs/breeds')
-  let { result: dogIds } = await dogsApi.loadIds({
+  let { result: dogIds } = await dogsApi.getIds({
     size: PAGE_LIMIT,
     sort: `${sortField.value}:${sortOrder.value === 1 ? 'asc' : 'desc'}`
   })
-  dogs.value = dogIds.value.resultIds as string[]
-  totalDogs.value = dogIds.value.total as number
+  dogs.value = dogIds?.resultIds as string[]
+  totalDogs.value = dogIds?.total as number
 
-  let { result: dogListDetails } = await dogsApi.loadDogDetails(dogs.value)
+  let { result: dogListDetails } = await dogsApi.getDogDetails(dogs.value)
 
-  selectedDogsInfo.value = dogListDetails.value ?? null
+  selectedDogsInfo.value = (dogListDetails as Dog[]) || null
 
   //Computed Values
 
