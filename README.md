@@ -1,6 +1,4 @@
-# Nuxt Minimal Starter
-
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Fetch Screening App
 
 ## Setup
 
@@ -37,39 +35,18 @@ yarn dev
 # bun
 bun run dev
 ```
+## Next Steps to improve app
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+  - MOBILE RESPONSIVENESS - there was a lot of functionality to implement, will take some thinking to make mobile UX user friendly
+  - Add custom styling to make it look a little less utilitarian
+  - Add tooltips / intro guide to the main page?
+  - Implement Session management rather than using a hacky 401 redirect
+  - Put in better error handling / toast service / typing
+  - Put some fancy animation for the final dog selection - needs some flair
+  - Implement a typeahead search for the City / State and make it a single field
+  - Some kind of slider for the age range might work better
+  - Fix bug of deleting dogs in sidebar not updating checkboxes on DogsTable
+  - Add reset button
+  - Add Logout
+  - Split the DogsTable rows in to a DogRow component
+  - Split the drawer contents in to a component
