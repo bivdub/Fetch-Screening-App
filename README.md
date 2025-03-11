@@ -38,6 +38,7 @@ bun run dev
 ## Next Steps to improve app
 
   - MOBILE RESPONSIVENESS - there was a lot of functionality to implement, will take some thinking to make mobile UX user friendly
+  - fix multiselect styling
   - Fix flash of Nuxt error screen on redirecto login (may be easier to fix with proper sessions)
   - Add custom styling to make it look a little less utilitarian
   - Add tooltips / intro guide to the main page?
